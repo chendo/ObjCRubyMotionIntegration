@@ -24,7 +24,7 @@ You must add the following files to the Linked Frameworks and Libraries section:
 * libc++.dylib
 * libicucore.dylib
 * libc++abi.dylib
-* <your app>-universal.a
+* [your app]-universal.a
 
 ## Header files
 
