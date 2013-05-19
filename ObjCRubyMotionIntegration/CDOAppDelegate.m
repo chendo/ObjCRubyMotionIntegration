@@ -7,12 +7,14 @@
 //
 
 #import "CDOAppDelegate.h"
+#import "CDORubyland.h"
 
 @implementation CDOAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    CDORubyland *ruby = [[CDORubyland alloc] init];
+    [ruby countdown];
 }
 
 @end

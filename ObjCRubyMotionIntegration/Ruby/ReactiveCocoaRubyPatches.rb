@@ -1,3 +1,5 @@
+# From https://github.com/kastiglione/RACSignupDemo-RubyMotion
+
 class RACSignal
   # RubyMotion's bridge support does not handle Objective-C methods that take block
   # arguments typed as id so as to take blocks of varying arity. To work around this,
