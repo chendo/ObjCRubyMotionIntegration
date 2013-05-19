@@ -1,0 +1,1829 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<struct type='{_ext_propertyAttributes=&quot;readonly&quot;B&quot;nonatomic&quot;B&quot;weak&quot;B&quot;canBeCollected&quot;B&quot;dynamic&quot;B&quot;memoryManagementPolicy&quot;i&quot;getter&quot;:&quot;setter&quot;:&quot;ivar&quot;*&quot;objectClass&quot;#&quot;type&quot;^c}' name='ext_propertyAttributes'>
+<field type='B' declared_type='BOOL' name='readonly'/>
+<field type='B' declared_type='BOOL' name='nonatomic'/>
+<field type='B' declared_type='BOOL' name='weak'/>
+<field type='B' declared_type='BOOL' name='canBeCollected'/>
+<field type='B' declared_type='BOOL' name='dynamic'/>
+<field type='i' declared_type='ext_propertyMemoryManagementPolicy' name='memoryManagementPolicy'/>
+<field type=':' declared_type='SEL' name='getter'/>
+<field type=':' declared_type='SEL' name='setter'/>
+<field type='*' const='true' declared_type='char*' name='ivar'/>
+<field type='#' declared_type='Class' name='objectClass'/>
+<field type='^c' declared_type='char*' name='type'/>
+</struct>
+<constant type='@' const='true' declared_type='NSString*' name='NSTaskRACSupportErrorData'/>
+<constant type='@' const='true' declared_type='NSString*' name='NSTaskRACSupportErrorDomain'/>
+<constant type='@' const='true' declared_type='NSString*' name='NSTaskRACSupportErrorString'/>
+<constant type='i' const='true' declared_type='NSInteger' name='NSTaskRACSupportNonZeroTerminationStatus'/>
+<constant type='@' const='true' declared_type='NSString*' name='NSTaskRACSupportOutputData'/>
+<constant type='@' const='true' declared_type='NSString*' name='NSTaskRACSupportOutputString'/>
+<constant type='@' const='true' declared_type='NSString*' name='NSTaskRACSupportTask'/>
+<constant type='@' const='true' declared_type='NSString*' name='NSTaskRACSupportTaskArguments'/>
+<constant type='I' const='true' declared_type='NSUInteger' name='RACReplaySubjectUnlimitedCapacity'/>
+<constant type='^v' const='true' declared_type='void*' name='RACSchedulerCurrentSchedulerKey'/>
+<constant type='@' const='true' declared_type='NSString*' name='RACSignalErrorDomain'/>
+<constant type='i' const='true' declared_type='NSInteger' name='RACSignalErrorTimedOut'/>
+<constant type='i' const='true' declared_type='ext_methodInjectionBehavior' name='ext_methodInjectionOverwriteBehaviorMask'/>
+<enum value='3' name='ext_methodInjectionFailOnAnyExisting'/>
+<enum value='1' name='ext_methodInjectionFailOnExisting'/>
+<enum value='2' name='ext_methodInjectionFailOnSuperclassExisting'/>
+<enum value='8' name='ext_methodInjectionIgnoreInitialize'/>
+<enum value='4' name='ext_methodInjectionIgnoreLoad'/>
+<enum value='0' name='ext_methodInjectionReplace'/>
+<enum value='0' name='ext_propertyMemoryManagementPolicyAssign'/>
+<enum value='2' name='ext_propertyMemoryManagementPolicyCopy'/>
+<enum value='1' name='ext_propertyMemoryManagementPolicyRetain'/>
+<function name='RACSwizzle'>
+<arg type='#' declared_type='Class' name='class'/>
+<arg type=':' declared_type='SEL' name='originalSelector'/>
+<arg type=':' declared_type='SEL' name='newSelector'/>
+<retval type='v' declared_type='void'/>
+</function>
+<function name='ext_addConcreteProtocol'>
+<arg type='@' declared_type='Protocol*' name='protocol'/>
+<arg type='#' declared_type='Class' name='methodContainer'/>
+<retval type='B' declared_type='BOOL'/>
+</function>
+<function name='ext_addMethods'>
+<arg type='#' declared_type='Class' name='aClass'/>
+<arg type='^^{objc_method}' declared_type='Method*' name='methods'/>
+<arg type='I' declared_type='unsigned int' name='count'/>
+<arg type='B' declared_type='BOOL' name='checkSuperclasses'/>
+<arg type='^?' declared_type='ext_failedMethodCallback' name='failedToAddCallback' function_pointer='true'>
+<arg type='#' declared_type='Class'/>
+<arg type='^{objc_method=}' declared_type='Method'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='I' declared_type='unsigned int'/>
+</function>
+<function name='ext_addMethodsFromClass'>
+<arg type='#' declared_type='Class' name='srcClass'/>
+<arg type='#' declared_type='Class' name='dstClass'/>
+<arg type='B' declared_type='BOOL' name='checkSuperclasses'/>
+<arg type='^?' declared_type='ext_failedMethodCallback' name='failedToAddCallback' function_pointer='true'>
+<arg type='#' declared_type='Class'/>
+<arg type='^{objc_method=}' declared_type='Method'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='B' declared_type='BOOL'/>
+</function>
+<function name='ext_classBeforeSuperclass'>
+<arg type='#' declared_type='Class' name='receiver'/>
+<arg type='#' declared_type='Class' name='superclass'/>
+<retval type='#' declared_type='Class'/>
+</function>
+<function name='ext_classIsKindOfClass'>
+<arg type='#' declared_type='Class' name='receiver'/>
+<arg type='#' declared_type='Class' name='aClass'/>
+<retval type='B' declared_type='BOOL'/>
+</function>
+<function name='ext_copyClassList'>
+<arg type='^I' declared_type='unsigned int*' name='count'/>
+<retval type='^#' declared_type='Class*'/>
+</function>
+<function name='ext_copyClassListConformingToProtocol'>
+<arg type='@' declared_type='Protocol*' name='protocol'/>
+<arg type='^I' declared_type='unsigned int*' name='count'/>
+<retval type='^#' declared_type='Class*'/>
+</function>
+<function name='ext_copyPropertyAttributes'>
+<arg type='^{objc_property=}' declared_type='objc_property_t' name='property'/>
+<retval type='^{_ext_propertyAttributes=BBBBBi::*#^c}' declared_type='ext_propertyAttributes*'/>
+</function>
+<function name='ext_copySubclassList'>
+<arg type='#' declared_type='Class' name='aClass'/>
+<arg type='^I' declared_type='unsigned int*' name='subclassCount'/>
+<retval type='^#' declared_type='Class*'/>
+</function>
+<function name='ext_executeCleanupBlock'>
+<arg type='^@?' declared_type='ext_cleanupBlock_t*' name='block'/>
+<retval type='v' declared_type='void'/>
+</function>
+<function name='ext_getImmediateInstanceMethod'>
+<arg type='#' declared_type='Class' name='aClass'/>
+<arg type=':' declared_type='SEL' name='aSelector'/>
+<retval type='^{objc_method=}' declared_type='Method'/>
+</function>
+<function name='ext_getPropertyAccessorsForClass'>
+<arg type='^{objc_property=}' declared_type='objc_property_t' name='property'/>
+<arg type='#' declared_type='Class' name='aClass'/>
+<arg type='^^{objc_method}' declared_type='Method*' name='getter'/>
+<arg type='^^{objc_method}' declared_type='Method*' name='setter'/>
+<retval type='B' declared_type='BOOL'/>
+</function>
+<function name='ext_globalMethodSignatureForSelector'>
+<arg type=':' declared_type='SEL' name='aSelector'/>
+<retval type='@' declared_type='NSMethodSignature*'/>
+</function>
+<function name='ext_injectMethods'>
+<arg type='#' declared_type='Class' name='aClass'/>
+<arg type='^^{objc_method}' declared_type='Method*' name='methods'/>
+<arg type='I' declared_type='unsigned int' name='count'/>
+<arg type='i' declared_type='ext_methodInjectionBehavior' name='behavior'/>
+<arg type='^?' declared_type='ext_failedMethodCallback' name='failedToAddCallback' function_pointer='true'>
+<arg type='#' declared_type='Class'/>
+<arg type='^{objc_method=}' declared_type='Method'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='I' declared_type='unsigned int'/>
+</function>
+<function name='ext_injectMethodsFromClass'>
+<arg type='#' declared_type='Class' name='srcClass'/>
+<arg type='#' declared_type='Class' name='dstClass'/>
+<arg type='i' declared_type='ext_methodInjectionBehavior' name='behavior'/>
+<arg type='^?' declared_type='ext_failedMethodCallback' name='failedToAddCallback' function_pointer='true'>
+<arg type='#' declared_type='Class'/>
+<arg type='^{objc_method=}' declared_type='Method'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='B' declared_type='BOOL'/>
+</function>
+<function name='ext_loadConcreteProtocol'>
+<arg type='@' declared_type='Protocol*' name='protocol'/>
+<retval type='v' declared_type='void'/>
+</function>
+<function name='ext_loadSpecialProtocol'>
+<arg type='@' declared_type='Protocol*' name='protocol'/>
+<arg type='@?' declared_type='void (^)(Class)' name='injectionBehavior' function_pointer='true'>
+<arg type='#' declared_type='Class'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='B' declared_type='BOOL'/>
+</function>
+<function name='ext_removeMethod'>
+<arg type='#' declared_type='Class' name='aClass'/>
+<arg type=':' declared_type='SEL' name='methodName'/>
+<retval type='v' declared_type='void'/>
+</function>
+<function name='ext_replaceMethods'>
+<arg type='#' declared_type='Class' name='aClass'/>
+<arg type='^^{objc_method}' declared_type='Method*' name='methods'/>
+<arg type='I' declared_type='unsigned int' name='count'/>
+<retval type='v' declared_type='void'/>
+</function>
+<function name='ext_replaceMethodsFromClass'>
+<arg type='#' declared_type='Class' name='srcClass'/>
+<arg type='#' declared_type='Class' name='dstClass'/>
+<retval type='v' declared_type='void'/>
+</function>
+<function name='ext_specialProtocolReadyForInjection'>
+<arg type='@' declared_type='Protocol*' name='protocol'/>
+<retval type='v' declared_type='void'/>
+</function>
+<function name='ext_stringFromTypedBytes'>
+<arg type='^v' const='true' declared_type='void*' name='bytes'/>
+<arg type='*' const='true' declared_type='char*' name='encoding'/>
+<retval type='@' declared_type='NSString*'/>
+</function>
+<class name='NSArray'>
+<method selector='rac_sequence'>
+<retval type='@' declared_type='RACSequence*'/>
+</method>
+</class>
+<class name='NSControl'>
+<method selector='rac_command'>
+<retval type='@' declared_type='RACCommand*'/>
+</method>
+<method selector='rac_textSignal'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='setRac_command:'>
+<arg type='@' index='0' declared_type='RACCommand*' name='rac_command'/>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+<class name='NSData'>
+<method class_method='true' selector='rac_readContentsOfURL:options:scheduler:'>
+<arg type='@' index='0' declared_type='NSURL*' name='URL'/>
+<arg type='I' index='1' declared_type='NSDataReadingOptions' name='options'/>
+<arg type='@' index='2' declared_type='id' name='scheduler'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+</class>
+<class name='NSDictionary'>
+<method selector='rac_keySequence'>
+<retval type='@' declared_type='RACSequence*'/>
+</method>
+<method selector='rac_sequence'>
+<retval type='@' declared_type='RACSequence*'/>
+</method>
+<method selector='rac_valueSequence'>
+<retval type='@' declared_type='RACSequence*'/>
+</method>
+</class>
+<class name='NSEnumerator'>
+<method selector='rac_sequence'>
+<retval type='@' declared_type='RACSequence*'/>
+</method>
+</class>
+<class name='NSFileHandle'>
+<method selector='rac_readInBackground'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+</class>
+<class name='NSInvocation'>
+<method selector='rac_argumentAtIndex:'>
+<arg type='I' index='0' declared_type='NSUInteger' name='index'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='rac_returnValue'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='rac_setArgument:atIndex:'>
+<arg type='@' index='0' declared_type='id' name='object'/>
+<arg type='I' index='1' declared_type='NSUInteger' name='index'/>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+<class name='NSNotificationCenter'>
+<method selector='rac_addObserverForName:object:'>
+<arg type='@' index='0' declared_type='NSString*' name='notificationName'/>
+<arg type='@' index='1' declared_type='id' name='object'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='RACKVOTrampolines'>
+<retval type='@' declared_type='NSMutableArray*'/>
+</method>
+<method selector='didSubscribeWithDisposable:'>
+<arg type='@' index='0' declared_type='RACDisposable*' name='disposable'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='jr_swizzleClassMethod:withClassMethod:error:'>
+<arg type=':' index='0' declared_type='SEL' name='origSel_'/>
+<arg type=':' index='1' declared_type='SEL' name='altSel_'/>
+<arg type='^@' index='2' declared_type='NSError**' name='error_'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method class_method='true' selector='jr_swizzleMethod:withMethod:error:'>
+<arg type=':' index='0' declared_type='SEL' name='origSel_'/>
+<arg type=':' index='1' declared_type='SEL' name='altSel_'/>
+<arg type='^@' index='2' declared_type='NSError**' name='error_'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='rac_addDeallocDisposable:'>
+<arg type='@' index='0' declared_type='RACDisposable*' name='disposable'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='rac_addKVOTrampoline:'>
+<arg type='@' index='0' declared_type='RACKVOTrampoline*' name='trampoline'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='rac_addObserver:forKeyPath:options:block:'>
+<arg type='@' index='0' declared_type='NSObject*' name='observer'/>
+<arg type='@' index='1' declared_type='NSString*' name='keyPath'/>
+<arg type='I' index='2' declared_type='NSKeyValueObservingOptions' name='options'/>
+<arg type='@?' index='3' declared_type='RACKVOBlock' name='block' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<arg type='@' declared_type='id'/>
+<arg type='@' declared_type='NSDictionary*'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='@' declared_type='RACKVOTrampoline*'/>
+</method>
+<method selector='rac_bind:toObject:withKeyPath:'>
+<arg type='@' index='0' declared_type='NSString*' name='binding'/>
+<arg type='@' index='1' declared_type='id' name='object'/>
+<arg type='@' index='2' declared_type='NSString*' name='keyPath'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='rac_bind:toObject:withKeyPath:nilValue:'>
+<arg type='@' index='0' declared_type='NSString*' name='binding'/>
+<arg type='@' index='1' declared_type='id' name='object'/>
+<arg type='@' index='2' declared_type='NSString*' name='keyPath'/>
+<arg type='@' index='3' declared_type='id' name='nilValue'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='rac_bind:toObject:withKeyPath:transform:'>
+<arg type='@' index='0' declared_type='NSString*' name='binding'/>
+<arg type='@' index='1' declared_type='id' name='object'/>
+<arg type='@' index='2' declared_type='NSString*' name='keyPath'/>
+<arg type='@?' index='3' declared_type='id (^)(id)' name='transformBlock' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='@' declared_type='id'/>
+</arg>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='rac_bind:toObject:withNegatedKeyPath:'>
+<arg type='@' index='0' declared_type='NSString*' name='binding'/>
+<arg type='@' index='1' declared_type='id' name='object'/>
+<arg type='@' index='2' declared_type='NSString*' name='keyPath'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='rac_deallocDisposable'>
+<retval type='@' declared_type='RACCompoundDisposable*'/>
+</method>
+<method selector='rac_deriveProperty:from:'>
+<arg type='@' index='0' declared_type='NSString*' name='keyPath'/>
+<arg type='@' index='1' declared_type='RACSignal*' name='signal'/>
+<retval type='@' declared_type='RACDisposable*'/>
+</method>
+<method selector='rac_description'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='rac_didDeallocSignal'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='rac_lift'>
+<retval type='@' declared_type='id'/>
+</method>
+<method variadic='true' selector='rac_liftBlock:withArguments:' sentinel='0'>
+<arg type='@' index='0' declared_type='id' name='block'/>
+<arg type='@' index='1' declared_type='id' name='arg'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='rac_liftBlock:withArgumentsFromArray:'>
+<arg type='@' index='0' declared_type='id' name='block'/>
+<arg type='@' index='1' declared_type='NSArray*' name='args'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method variadic='true' selector='rac_liftSelector:withObjects:'>
+<arg type=':' index='0' declared_type='SEL' name='selector'/>
+<arg type='@' index='1' declared_type='id' name='arg'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='rac_liftSelector:withObjectsFromArray:'>
+<arg type=':' index='0' declared_type='SEL' name='selector'/>
+<arg type='@' index='1' declared_type='NSArray*' name='args'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='rac_propertyForKeyPath:'>
+<arg type='@' index='0' declared_type='NSString*' name='keyPath'/>
+<retval type='@' declared_type='RACObservablePropertySubject*'/>
+</method>
+<method selector='rac_removeKVOTrampoline:'>
+<arg type='@' index='0' declared_type='RACKVOTrampoline*' name='trampoline'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='rac_signalFor:keyPath:observer:'>
+<arg type='@' index='0' declared_type='NSObject*' name='object'/>
+<arg type='@' index='1' declared_type='NSString*' name='keyPath'/>
+<arg type='@' index='2' declared_type='NSObject*' name='observer'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='rac_signalForKeyPath:observer:'>
+<arg type='@' index='0' declared_type='NSString*' name='keyPath'/>
+<arg type='@' index='1' declared_type='NSObject*' name='observer'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method class_method='true' selector='rac_signalForSelector:'>
+<arg type=':' index='0' declared_type='SEL' name='selector'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='rac_signalForSelector:'>
+<arg type=':' index='0' declared_type='SEL' name='selector'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method class_method='true' selector='rac_signalWithChangesFor:keyPath:options:observer:'>
+<arg type='@' index='0' declared_type='NSObject*' name='object'/>
+<arg type='@' index='1' declared_type='NSString*' name='keyPath'/>
+<arg type='I' index='2' declared_type='NSKeyValueObservingOptions' name='options'/>
+<arg type='@' index='3' declared_type='NSObject*' name='observer'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method class_method='true' selector='rac_signalWithStartingValueFor:keyPath:observer:'>
+<arg type='@' index='0' declared_type='NSObject*' name='object'/>
+<arg type='@' index='1' declared_type='NSString*' name='keyPath'/>
+<arg type='@' index='2' declared_type='NSObject*' name='observer'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='rac_signalWithStartingValueForKeyPath:observer:'>
+<arg type='@' index='0' declared_type='NSString*' name='keyPath'/>
+<arg type='@' index='1' declared_type='NSObject*' name='observer'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='sendCompleted'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='sendError:'>
+<arg type='@' index='0' declared_type='NSError*' name='error'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='sendNext:'>
+<arg type='@' index='0' declared_type='id' name='value'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setRACKVOTrampolines:'>
+<arg type='@' index='0' declared_type='NSMutableArray*' name='RACKVOTrampolines'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setRac_deallocDisposable:'>
+<arg type='@' index='0' declared_type='RACCompoundDisposable*' name='rac_deallocDisposable'/>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+<class name='NSOrderedSet'>
+<method selector='rac_sequence'>
+<retval type='@' declared_type='RACSequence*'/>
+</method>
+</class>
+<class name='NSSet'>
+<method selector='rac_sequence'>
+<retval type='@' declared_type='RACSequence*'/>
+</method>
+</class>
+<class name='NSString'>
+<method selector='rac_keyPathByDeletingLastKeyPathComponent'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='rac_keyPathComponents'>
+<retval type='@' declared_type='NSArray*'/>
+</method>
+<method class_method='true' selector='rac_readContentsOfURL:usedEncoding:scheduler:'>
+<arg type='@' index='0' declared_type='NSURL*' name='URL'/>
+<arg type='^I' index='1' declared_type='NSStringEncoding*' name='encoding'/>
+<arg type='@' index='2' declared_type='id' name='scheduler'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='rac_sequence'>
+<retval type='@' declared_type='RACSequence*'/>
+</method>
+</class>
+<class name='NSTask'>
+<method selector='rac_completion'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='rac_run'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='rac_runWithScheduler:'>
+<arg type='@' index='0' declared_type='id' name='scheduler'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='rac_standardError'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='rac_standardOutput'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+</class>
+<class name='NSText'>
+<method selector='rac_textSignal'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+</class>
+<class name='RACArraySequence'>
+<method class_method='true' selector='sequenceWithArray:offset:'>
+<arg type='@' index='0' declared_type='NSArray*' name='array'/>
+<arg type='I' index='1' declared_type='NSUInteger' name='offset'/>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='RACBehaviorSubject'>
+<method class_method='true' selector='behaviorSubjectWithDefaultValue:'>
+<arg type='@' index='0' declared_type='id' name='value'/>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='RACBinding'>
+<method selector='bindTo:'>
+<arg type='@' index='0' declared_type='RACBinding*' name='binding'/>
+<retval type='@' declared_type='RACDisposable*'/>
+</method>
+<method selector='initWithSignal:subscriber:'>
+<arg type='@' index='0' declared_type='RACSignal*' name='signal'/>
+<arg type='@' index='1' declared_type='id' name='subscriber'/>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='RACBlockTrampoline'>
+<method class_method='true' selector='invokeBlock:withArguments:'>
+<arg type='@' index='0' declared_type='id' name='block'/>
+<arg type='@' index='1' declared_type='RACTuple*' name='arguments'/>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='RACCommand'>
+<method selector='addSignalBlock:'>
+<arg type='@?' index='0' declared_type='RACSignal *(^)(id)' name='signalBlock' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='@' declared_type='RACSignal*'/>
+</arg>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='allowsConcurrentExecution'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='canExecute'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method class_method='true' selector='command'>
+<retval type='@' declared_type='id'/>
+</method>
+<method class_method='true' selector='commandWithCanExecuteSignal:'>
+<arg type='@' index='0' declared_type='RACSignal*' name='canExecuteSignal'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='didSubscribeWithDisposable:'>
+<arg type='@' index='0' declared_type='RACDisposable*' name='disposable'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='errors'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='execute:'>
+<arg type='@' index='0' declared_type='id' name='value'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='executing'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='initWithCanExecuteSignal:'>
+<arg type='@' index='0' declared_type='RACSignal*' name='canExecuteSignal'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='sendCompleted'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='sendError:'>
+<arg type='@' index='0' declared_type='NSError*' name='error'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='sendNext:'>
+<arg type='@' index='0' declared_type='id' name='value'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setAllowsConcurrentExecution:'>
+<arg type='B' index='0' declared_type='BOOL' name='allowsConcurrentExecution'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setCanExecute:'>
+<arg type='B' index='0' declared_type='BOOL' name='canExecute'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setErrors:'>
+<arg type='@' index='0' declared_type='RACSignal*' name='errors'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setExecuting:'>
+<arg type='B' index='0' declared_type='BOOL' name='executing'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='subject'>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='RACCompoundDisposable'>
+<method selector='addDisposable:'>
+<arg type='@' index='0' declared_type='RACDisposable*' name='disposable'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='compoundDisposable'>
+<retval type='@' declared_type='id'/>
+</method>
+<method class_method='true' selector='compoundDisposableWithDisposables:'>
+<arg type='@' index='0' declared_type='NSArray*' name='disposables'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='removeDisposable:'>
+<arg type='@' index='0' declared_type='RACDisposable*' name='disposable'/>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+<class name='RACDisposable'>
+<method selector='asScopedDisposable'>
+<retval type='@' declared_type='RACScopedDisposable*'/>
+</method>
+<method class_method='true' selector='disposableWithBlock:'>
+<arg type='@?' index='0' declared_type='void (^)(void)' name='block' function_pointer='true'>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='dispose'>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+<class name='RACDynamicSequence'>
+<method class_method='true' selector='sequenceWithLazyDependency:headBlock:tailBlock:'>
+<arg type='@?' index='0' declared_type='id (^)(void)' name='dependencyBlock' function_pointer='true'>
+<retval type='@' declared_type='id'/>
+</arg>
+<arg type='@?' index='1' declared_type='id (^)(id)' name='headBlock' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='@' declared_type='id'/>
+</arg>
+<arg type='@?' index='2' declared_type='RACSequence *(^)(id)' name='tailBlock' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='@' declared_type='RACSequence*'/>
+</arg>
+<retval type='@' declared_type='RACSequence*'/>
+</method>
+</class>
+<class name='RACEvent'>
+<method class_method='true' selector='completedEvent'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='error'>
+<retval type='@' declared_type='NSError*'/>
+</method>
+<method selector='eventType'>
+<retval type='i' declared_type='int'/>
+</method>
+<method class_method='true' selector='eventWithError:'>
+<arg type='@' index='0' declared_type='NSError*' name='error'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method class_method='true' selector='eventWithValue:'>
+<arg type='@' index='0' declared_type='id' name='value'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='isFinished'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='setError:'>
+<arg type='@' index='0' declared_type='NSError*' name='error'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setValue:'>
+<arg type='@' index='0' declared_type='id' name='value'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='value'>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='RACGroupedSignal'>
+<method selector='key'>
+<retval type='@' declared_type='id'/>
+</method>
+<method class_method='true' selector='signalWithKey:'>
+<arg type='@' index='0' declared_type='id' name='key'/>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='RACKVOTrampoline'>
+<method selector='initWithTarget:observer:keyPath:options:block:'>
+<arg type='@' index='0' declared_type='NSObject*' name='target'/>
+<arg type='@' index='1' declared_type='NSObject*' name='observer'/>
+<arg type='@' index='2' declared_type='NSString*' name='keyPath'/>
+<arg type='I' index='3' declared_type='NSKeyValueObservingOptions' name='options'/>
+<arg type='@?' index='4' declared_type='RACKVOBlock' name='block' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<arg type='@' declared_type='id'/>
+<arg type='@' declared_type='NSDictionary*'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='stopObserving'>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+<class name='RACMulticastConnection'>
+<method selector='autoconnect'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='connect'>
+<retval type='@' declared_type='RACDisposable*'/>
+</method>
+<method selector='setSignal:'>
+<arg type='@' index='0' declared_type='RACSignal*' name='signal'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='signal'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+</class>
+<class name='RACObjCRuntime'>
+<method class_method='true' selector='findMethod:inProtocol:outMethod:'>
+<arg type=':' index='0' declared_type='SEL' name='method'/>
+<arg type='@' index='1' declared_type='Protocol*' name='protocol'/>
+<arg type='^{objc_method_description=:*}' index='2' declared_type='struct objc_method_description*' name='outMethod'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='getMethodTypesForMethod:inProtocol:'>
+<arg type=':' index='0' declared_type='SEL' name='method'/>
+<arg type='@' index='1' declared_type='Protocol*' name='protocol'/>
+<retval type='*' const='true' declared_type='char*'/>
+</method>
+<method class_method='true' selector='method:existsInProtocol:'>
+<arg type=':' index='0' declared_type='SEL' name='method'/>
+<arg type='@' index='1' declared_type='Protocol*' name='protocol'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+</class>
+<class name='RACObservablePropertySubject'>
+<method selector='objectForKeyedSubscript:'>
+<arg type='@' index='0' declared_type='id' name='key'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method class_method='true' selector='propertyWithTarget:keyPath:'>
+<arg type='@' index='0' declared_type='id' name='target'/>
+<arg type='@' index='1' declared_type='NSString*' name='keyPath'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='setObject:forKeyedSubscript:'>
+<arg type='@' index='0' declared_type='id' name='obj'/>
+<arg type='@' index='1' declared_type='id' name='key'/>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+<class name='RACPropertySubject'>
+<method selector='binding'>
+<retval type='@' declared_type='RACBinding*'/>
+</method>
+<method selector='initWithSignal:subscriber:'>
+<arg type='@' index='0' declared_type='RACSignal*' name='signal'/>
+<arg type='@' index='1' declared_type='id' name='subscriber'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method class_method='true' selector='property'>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='RACQueueScheduler'>
+<method selector='initWithName:targetQueue:'>
+<arg type='@' index='0' declared_type='NSString*' name='name'/>
+<arg type='@' index='1' declared_type='dispatch_queue_t' name='targetQueue'/>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='RACReplaySubject'>
+<method class_method='true' selector='replaySubjectWithCapacity:'>
+<arg type='I' index='0' declared_type='NSUInteger' name='capacity'/>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='RACScheduler'>
+<method selector='after:schedule:'>
+<arg type='Q' index='0' declared_type='dispatch_time_t' name='when'/>
+<arg type='@?' index='1' declared_type='void (^)(void)' name='block' function_pointer='true'>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='@' declared_type='RACDisposable*'/>
+</method>
+<method selector='afterDelay:schedule:'>
+<arg type='d' index='0' declared_type='NSTimeInterval' name='delay'/>
+<arg type='@?' index='1' declared_type='void (^)(void)' name='block' function_pointer='true'>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='@' declared_type='RACDisposable*'/>
+</method>
+<method class_method='true' selector='currentScheduler'>
+<retval type='@' declared_type='id'/>
+</method>
+<method class_method='true' selector='immediateScheduler'>
+<retval type='@' declared_type='id'/>
+</method>
+<method class_method='true' selector='mainThreadScheduler'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='schedule:'>
+<arg type='@?' index='0' declared_type='void (^)(void)' name='block' function_pointer='true'>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='@' declared_type='RACDisposable*'/>
+</method>
+<method selector='scheduleRecursiveBlock:'>
+<arg type='@?' index='0' declared_type='RACSchedulerRecursiveBlock' name='recursiveBlock' function_pointer='true'>
+<arg type='@?' declared_type='void (^)(void)'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='@' declared_type='RACDisposable*'/>
+</method>
+<method class_method='true' selector='scheduler'>
+<retval type='@' declared_type='id'/>
+</method>
+<method class_method='true' selector='schedulerWithPriority:'>
+<arg type='@' index='0' declared_type='id' name='priority'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method class_method='true' selector='schedulerWithPriority:name:'>
+<arg type='@' index='0' declared_type='id' name='priority'/>
+<arg type='@' index='1' declared_type='NSString*' name='name'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method class_method='true' selector='schedulerWithQueue:name:'>
+<arg type='@' index='0' declared_type='dispatch_queue_t' name='queue'/>
+<arg type='@' index='1' declared_type='NSString*' name='name'/>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='RACScopedDisposable'>
+<method class_method='true' selector='scopedDisposableWithDisposable:'>
+<arg type='@' index='0' declared_type='RACDisposable*' name='disposable'/>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='RACSequence'>
+<method selector='all:'>
+<arg type='@?' index='0' declared_type='BOOL (^)(id)' name='block' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='B' declared_type='BOOL'/>
+</arg>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='any:'>
+<arg type='@?' index='0' declared_type='BOOL (^)(id)' name='block' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='B' declared_type='BOOL'/>
+</arg>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='array'>
+<retval type='@' declared_type='NSArray*'/>
+</method>
+<method selector='eagerSequence'>
+<retval type='@' declared_type='RACSequence*'/>
+</method>
+<method selector='foldLeftWithStart:combine:'>
+<arg type='@' index='0' declared_type='id' name='start'/>
+<arg type='@?' index='1' declared_type='id (^)(id, id)' name='combine' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<arg type='@' declared_type='id'/>
+<retval type='@' declared_type='id'/>
+</arg>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='foldRightWithStart:combine:'>
+<arg type='@' index='0' declared_type='id' name='start'/>
+<arg type='@?' index='1' declared_type='id (^)(id, RACSequence *)' name='combine' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<arg type='@' declared_type='RACSequence*'/>
+<retval type='@' declared_type='id'/>
+</arg>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='head'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='lazySequence'>
+<retval type='@' declared_type='RACSequence*'/>
+</method>
+<method selector='objectEnumerator'>
+<retval type='@' declared_type='NSEnumerator*'/>
+</method>
+<method selector='objectPassingTest:'>
+<arg type='@?' index='0' declared_type='BOOL (^)(id)' name='block' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='B' declared_type='BOOL'/>
+</arg>
+<retval type='@' declared_type='id'/>
+</method>
+<method class_method='true' selector='sequenceWithHeadBlock:tailBlock:'>
+<arg type='@?' index='0' declared_type='id (^)(void)' name='headBlock' function_pointer='true'>
+<retval type='@' declared_type='id'/>
+</arg>
+<arg type='@?' index='1' declared_type='RACSequence *(^)(void)' name='tailBlock' function_pointer='true'>
+<retval type='@' declared_type='RACSequence*'/>
+</arg>
+<retval type='@' declared_type='RACSequence*'/>
+</method>
+<method selector='setHead:'>
+<arg type='@' index='0' declared_type='id' name='head'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setTail:'>
+<arg type='@' index='0' declared_type='RACSequence*' name='tail'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='signal'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='signalWithScheduler:'>
+<arg type='@' index='0' declared_type='RACScheduler*' name='scheduler'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='tail'>
+<retval type='@' declared_type='RACSequence*'/>
+</method>
+</class>
+<class name='RACSignal'>
+<method selector='aggregateWithStart:combine:'>
+<arg type='@' index='0' declared_type='id' name='start'/>
+<arg type='@?' index='1' declared_type='id (^)(id, id)' name='combineBlock' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<arg type='@' declared_type='id'/>
+<retval type='@' declared_type='id'/>
+</arg>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='aggregateWithStartFactory:combine:'>
+<arg type='@?' index='0' declared_type='id (^)(void)' name='startFactory' function_pointer='true'>
+<retval type='@' declared_type='id'/>
+</arg>
+<arg type='@?' index='1' declared_type='id (^)(id, id)' name='combineBlock' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<arg type='@' declared_type='id'/>
+<retval type='@' declared_type='id'/>
+</arg>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='all:'>
+<arg type='@?' index='0' declared_type='BOOL (^)(id)' name='predicateBlock' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='B' declared_type='BOOL'/>
+</arg>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='any'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='any:'>
+<arg type='@?' index='0' declared_type='BOOL (^)(id)' name='predicateBlock' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='B' declared_type='BOOL'/>
+</arg>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='asynchronousFirstOrDefault:success:error:'>
+<arg type='@' index='0' declared_type='id' name='defaultValue'/>
+<arg type='^B' index='1' declared_type='BOOL*' name='success'/>
+<arg type='^@' index='2' declared_type='NSError**' name='error'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='asynchronouslyWaitUntilCompleted:'>
+<arg type='^@' index='0' declared_type='NSError**' name='error'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='buffer:'>
+<arg type='I' index='0' declared_type='NSUInteger' name='bufferCount'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='bufferWithTime:'>
+<arg type='d' index='0' declared_type='NSTimeInterval' name='interval'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='catch:'>
+<arg type='@?' index='0' declared_type='RACSignal *(^)(NSError *)' name='catchBlock' function_pointer='true'>
+<arg type='@' declared_type='NSError*'/>
+<retval type='@' declared_type='RACSignal*'/>
+</arg>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='catchTo:'>
+<arg type='@' index='0' declared_type='RACSignal*' name='signal'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='collect'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method class_method='true' selector='combineLatest:'>
+<arg type='@' index='0' declared_type='id' name='signals'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method class_method='true' selector='combineLatest:reduce:'>
+<arg type='@' index='0' declared_type='id' name='signals'/>
+<arg type='@' index='1' declared_type='id' name='reduceBlock'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='combineLatestWith:'>
+<arg type='@' index='0' declared_type='RACSignal*' name='signal'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='concat'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='concat:'>
+<arg type='@' index='0' declared_type='RACSignal*' name='signal'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method class_method='true' selector='createSignal:'>
+<arg type='@?' index='0' declared_type='RACDisposable *(^)(id)' name='didSubscribe' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='@' declared_type='RACDisposable*'/>
+</arg>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method class_method='true' selector='defer:'>
+<arg type='@?' index='0' declared_type='RACSignal *(^)(void)' name='block' function_pointer='true'>
+<retval type='@' declared_type='RACSignal*'/>
+</arg>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='delay:'>
+<arg type='d' index='0' declared_type='NSTimeInterval' name='interval'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='deliverOn:'>
+<arg type='@' index='0' declared_type='RACScheduler*' name='scheduler'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='dematerialize'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='didSubscribe'>
+<retval type='@?' declared_type='RACDisposable *(^)(id)' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='@' declared_type='RACDisposable*'/>
+</retval>
+</method>
+<method selector='distinctUntilChanged'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='doCompleted:'>
+<arg type='@?' index='0' declared_type='void (^)(void)' name='block' function_pointer='true'>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='doError:'>
+<arg type='@?' index='0' declared_type='void (^)(NSError *)' name='block' function_pointer='true'>
+<arg type='@' declared_type='NSError*'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='doNext:'>
+<arg type='@?' index='0' declared_type='void (^)(id)' name='block' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method class_method='true' selector='empty'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method class_method='true' selector='error:'>
+<arg type='@' index='0' declared_type='NSError*' name='error'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='executeCommand:'>
+<arg type='@' index='0' declared_type='RACCommand*' name='command'/>
+<retval type='@' declared_type='RACDisposable*'/>
+</method>
+<method selector='finally:'>
+<arg type='@?' index='0' declared_type='void (^)(void)' name='block' function_pointer='true'>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='first'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='firstOrDefault:'>
+<arg type='@' index='0' declared_type='id' name='defaultValue'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='firstOrDefault:success:error:'>
+<arg type='@' index='0' declared_type='id' name='defaultValue'/>
+<arg type='^B' index='1' declared_type='BOOL*' name='success'/>
+<arg type='^@' index='2' declared_type='NSError**' name='error'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='flatten:'>
+<arg type='I' index='0' declared_type='NSUInteger' name='maxConcurrent'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='groupBy:'>
+<arg type='@?' index='0' declared_type='id (^)(id)' name='keyBlock' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='@' declared_type='id'/>
+</arg>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='groupBy:transform:'>
+<arg type='@?' index='0' declared_type='id (^)(id)' name='keyBlock' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='@' declared_type='id'/>
+</arg>
+<arg type='@?' index='1' declared_type='id (^)(id)' name='transformBlock' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='@' declared_type='id'/>
+</arg>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method class_method='true' selector='if:then:else:'>
+<arg type='@' index='0' declared_type='RACSignal*' name='boolSignal'/>
+<arg type='@' index='1' declared_type='RACSignal*' name='trueSignal'/>
+<arg type='@' index='2' declared_type='RACSignal*' name='falseSignal'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='ignoreElements'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method class_method='true' selector='interval:'>
+<arg type='d' index='0' declared_type='NSTimeInterval' name='interval'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method class_method='true' selector='interval:withLeeway:'>
+<arg type='d' index='0' declared_type='NSTimeInterval' name='interval'/>
+<arg type='d' index='1' declared_type='NSTimeInterval' name='leeway'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='let:'>
+<arg type='@?' index='0' declared_type='RACSignal *(^)(RACSignal *)' name='letBlock' function_pointer='true'>
+<arg type='@' declared_type='RACSignal*'/>
+<retval type='@' declared_type='RACSignal*'/>
+</arg>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='logAll'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='logCompleted'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='logError'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='logNext'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='materialize'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method class_method='true' selector='merge:'>
+<arg type='@' index='0' declared_type='id' name='signals'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='multicast:'>
+<arg type='@' index='0' declared_type='RACSubject*' name='subject'/>
+<retval type='@' declared_type='RACMulticastConnection*'/>
+</method>
+<method class_method='true' selector='never'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='not'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='performBlockOnEachSubscriber:'>
+<arg type='@?' index='0' declared_type='void (^)(id)' name='block' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='publish'>
+<retval type='@' declared_type='RACMulticastConnection*'/>
+</method>
+<method selector='repeat'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='replay'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='replayLast'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='replayLazily'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='retry'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='retry:'>
+<arg type='i' index='0' declared_type='NSInteger' name='retryCount'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method class_method='true' selector='return:'>
+<arg type='@' index='0' declared_type='id' name='value'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='sample:'>
+<arg type='@' index='0' declared_type='RACSignal*' name='sampler'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='sequence'>
+<retval type='@' declared_type='RACSequence*'/>
+</method>
+<method selector='sequenceNext:'>
+<arg type='@?' index='0' declared_type='RACSignal *(^)(void)' name='block' function_pointer='true'>
+<retval type='@' declared_type='RACSignal*'/>
+</arg>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='setDidSubscribe:'>
+<arg type='@?' index='0' declared_type='RACDisposable *(^)(id)' name='didSubscribe' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='@' declared_type='RACDisposable*'/>
+</arg>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setSequence:'>
+<arg type='@' index='0' declared_type='RACSequence*' name='sequence'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setSubscribers:'>
+<arg type='@' index='0' declared_type='NSMutableArray*' name='subscribers'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='start:'>
+<arg type='@?' index='0' declared_type='id (^)(BOOL *, NSError **)' name='block' function_pointer='true'>
+<arg type='^B' declared_type='BOOL*'/>
+<arg type='^@' declared_type='NSError**'/>
+<retval type='@' declared_type='id'/>
+</arg>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method class_method='true' selector='startWithScheduler:block:'>
+<arg type='@' index='0' declared_type='RACScheduler*' name='scheduler'/>
+<arg type='@?' index='1' declared_type='id (^)(BOOL *, NSError **)' name='block' function_pointer='true'>
+<arg type='^B' declared_type='BOOL*'/>
+<arg type='^@' declared_type='NSError**'/>
+<retval type='@' declared_type='id'/>
+</arg>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method class_method='true' selector='startWithScheduler:subjectBlock:'>
+<arg type='@' index='0' declared_type='RACScheduler*' name='scheduler'/>
+<arg type='@?' index='1' declared_type='void (^)(RACSubject *)' name='block' function_pointer='true'>
+<arg type='@' declared_type='RACSubject*'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='subscribe:'>
+<arg type='@' index='0' declared_type='id' name='subscriber'/>
+<retval type='@' declared_type='RACDisposable*'/>
+</method>
+<method selector='subscribeCompleted:'>
+<arg type='@?' index='0' declared_type='void (^)(void)' name='completedBlock' function_pointer='true'>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='@' declared_type='RACDisposable*'/>
+</method>
+<method selector='subscribeError:'>
+<arg type='@?' index='0' declared_type='void (^)(NSError *)' name='errorBlock' function_pointer='true'>
+<arg type='@' declared_type='NSError*'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='@' declared_type='RACDisposable*'/>
+</method>
+<method selector='subscribeError:completed:'>
+<arg type='@?' index='0' declared_type='void (^)(NSError *)' name='errorBlock' function_pointer='true'>
+<arg type='@' declared_type='NSError*'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<arg type='@?' index='1' declared_type='void (^)(void)' name='completedBlock' function_pointer='true'>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='@' declared_type='RACDisposable*'/>
+</method>
+<method selector='subscribeNext:'>
+<arg type='@?' index='0' declared_type='void (^)(id)' name='nextBlock' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='@' declared_type='RACDisposable*'/>
+</method>
+<method selector='subscribeNext:completed:'>
+<arg type='@?' index='0' declared_type='void (^)(id)' name='nextBlock' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<arg type='@?' index='1' declared_type='void (^)(void)' name='completedBlock' function_pointer='true'>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='@' declared_type='RACDisposable*'/>
+</method>
+<method selector='subscribeNext:error:'>
+<arg type='@?' index='0' declared_type='void (^)(id)' name='nextBlock' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<arg type='@?' index='1' declared_type='void (^)(NSError *)' name='errorBlock' function_pointer='true'>
+<arg type='@' declared_type='NSError*'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='@' declared_type='RACDisposable*'/>
+</method>
+<method selector='subscribeNext:error:completed:'>
+<arg type='@?' index='0' declared_type='void (^)(id)' name='nextBlock' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<arg type='@?' index='1' declared_type='void (^)(NSError *)' name='errorBlock' function_pointer='true'>
+<arg type='@' declared_type='NSError*'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<arg type='@?' index='2' declared_type='void (^)(void)' name='completedBlock' function_pointer='true'>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='@' declared_type='RACDisposable*'/>
+</method>
+<method selector='subscribeOn:'>
+<arg type='@' index='0' declared_type='RACScheduler*' name='scheduler'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='subscribers'>
+<retval type='@' declared_type='NSMutableArray*'/>
+</method>
+<method selector='switchToLatest'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='takeLast:'>
+<arg type='I' index='0' declared_type='NSUInteger' name='count'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='takeUntil:'>
+<arg type='@' index='0' declared_type='RACSignal*' name='signalTrigger'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='throttle:'>
+<arg type='d' index='0' declared_type='NSTimeInterval' name='interval'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='timeout:'>
+<arg type='d' index='0' declared_type='NSTimeInterval' name='interval'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='toArray'>
+<retval type='@' declared_type='NSArray*'/>
+</method>
+<method selector='toProperty:onObject:'>
+<arg type='@' index='0' declared_type='NSString*' name='keyPath'/>
+<arg type='@' index='1' declared_type='NSObject*' name='object'/>
+<retval type='@' declared_type='RACDisposable*'/>
+</method>
+<method selector='waitUntilCompleted:'>
+<arg type='^@' index='0' declared_type='NSError**' name='error'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='windowWithStart:close:'>
+<arg type='@' index='0' declared_type='RACSignal*' name='openSignal'/>
+<arg type='@?' index='1' declared_type='RACSignal *(^)(RACSignal *)' name='closeBlock' function_pointer='true'>
+<arg type='@' declared_type='RACSignal*'/>
+<retval type='@' declared_type='RACSignal*'/>
+</arg>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method selector='zipWith:'>
+<arg type='@' index='0' declared_type='RACSignal*' name='signal'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+</class>
+<class name='RACSignalSequence'>
+<method class_method='true' selector='sequenceWithSignal:'>
+<arg type='@' index='0' declared_type='RACSignal*' name='signal'/>
+<retval type='@' declared_type='RACSequence*'/>
+</method>
+</class>
+<class name='RACStream'>
+<method selector='bind:'>
+<arg type='@?' index='0' declared_type='RACStreamBindBlock (^)(void)' name='block' function_pointer='true'>
+<retval type='@?' declared_type='RACStreamBindBlock' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<arg type='^B' declared_type='BOOL*'/>
+<retval type='@' declared_type='RACStream*'/>
+</retval>
+</arg>
+<retval type='@' declared_type='id'/>
+</method>
+<method class_method='true' selector='concat:'>
+<arg type='@' index='0' declared_type='id' name='streams'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='concat:'>
+<arg type='@' index='0' declared_type='RACStream*' name='stream'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method class_method='true' selector='empty'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='filter:'>
+<arg type='@?' index='0' declared_type='BOOL (^)(id)' name='block' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='B' declared_type='BOOL'/>
+</arg>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='flatten'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='flattenMap:'>
+<arg type='@?' index='0' declared_type='RACStream *(^)(id)' name='block' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='@' declared_type='RACStream*'/>
+</arg>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='map:'>
+<arg type='@?' index='0' declared_type='id (^)(id)' name='block' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='@' declared_type='id'/>
+</arg>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='mapPreviousWithStart:combine:'>
+<arg type='@' index='0' declared_type='id' name='start'/>
+<arg type='@?' index='1' declared_type='id (^)(id, id)' name='combineBlock' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<arg type='@' declared_type='id'/>
+<retval type='@' declared_type='id'/>
+</arg>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='mapReplace:'>
+<arg type='@' index='0' declared_type='id' name='object'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='name'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='reduceEach:'>
+<arg type='@' index='0' declared_type='id' name='reduceBlock'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method class_method='true' selector='return:'>
+<arg type='@' index='0' declared_type='id' name='value'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='scanWithStart:combine:'>
+<arg type='@' index='0' declared_type='id' name='startingValue'/>
+<arg type='@?' index='1' declared_type='id (^)(id, id)' name='block' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<arg type='@' declared_type='id'/>
+<retval type='@' declared_type='id'/>
+</arg>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='sequenceMany:'>
+<arg type='@?' index='0' declared_type='RACStream *(^)(void)' name='block' function_pointer='true'>
+<retval type='@' declared_type='RACStream*'/>
+</arg>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='setName:'>
+<arg type='@' index='0' declared_type='NSString*' name='name'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method variadic='true' selector='setNameWithFormat:'>
+<arg printf_format='true' type='@' index='0' declared_type='NSString*' name='format'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='skip:'>
+<arg type='I' index='0' declared_type='NSUInteger' name='skipCount'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='skipUntilBlock:'>
+<arg type='@?' index='0' declared_type='BOOL (^)(id)' name='predicate' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='B' declared_type='BOOL'/>
+</arg>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='skipWhileBlock:'>
+<arg type='@?' index='0' declared_type='BOOL (^)(id)' name='predicate' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='B' declared_type='BOOL'/>
+</arg>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='startWith:'>
+<arg type='@' index='0' declared_type='id' name='value'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='take:'>
+<arg type='I' index='0' declared_type='NSUInteger' name='count'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='takeUntilBlock:'>
+<arg type='@?' index='0' declared_type='BOOL (^)(id)' name='predicate' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='B' declared_type='BOOL'/>
+</arg>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='takeWhileBlock:'>
+<arg type='@?' index='0' declared_type='BOOL (^)(id)' name='predicate' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='B' declared_type='BOOL'/>
+</arg>
+<retval type='@' declared_type='id'/>
+</method>
+<method class_method='true' selector='zip:'>
+<arg type='@' index='0' declared_type='id' name='streams'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method class_method='true' selector='zip:reduce:'>
+<arg type='@' index='0' declared_type='id' name='streams'/>
+<arg type='@' index='1' declared_type='id' name='reduceBlock'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='zipWith:'>
+<arg type='@' index='0' declared_type='RACStream*' name='stream'/>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='RACStringSequence'>
+<method class_method='true' selector='sequenceWithString:offset:'>
+<arg type='@' index='0' declared_type='NSString*' name='string'/>
+<arg type='I' index='1' declared_type='NSUInteger' name='offset'/>
+<retval type='@' declared_type='RACSequence*'/>
+</method>
+</class>
+<class name='RACSubject'>
+<method class_method='true' selector='subject'>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='RACSubscriber'>
+<method class_method='true' selector='subscriberWithNext:error:completed:'>
+<arg type='@?' index='0' declared_type='void (^)(id)' name='next' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<arg type='@?' index='1' declared_type='void (^)(NSError *)' name='error' function_pointer='true'>
+<arg type='@' declared_type='NSError*'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<arg type='@?' index='2' declared_type='void (^)(void)' name='completed' function_pointer='true'>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='RACSubscriptingAssignmentObjectKeyPathPair'>
+<method selector='initWithObject:keyPath:'>
+<arg type='@' index='0' declared_type='NSObject*' name='object'/>
+<arg type='@' index='1' declared_type='NSString*' name='keyPath'/>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='RACSubscriptingAssignmentTrampoline'>
+<method selector='setObject:forKeyedSubscript:'>
+<arg type='@' index='0' declared_type='RACSignal*' name='signal'/>
+<arg type='@' index='1' declared_type='id' name='key'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='trampoline'>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='RACTuple'>
+<method selector='allObjects'>
+<retval type='@' declared_type='NSArray*'/>
+</method>
+<method selector='count'>
+<retval type='I' declared_type='NSUInteger'/>
+</method>
+<method selector='fifth'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='first'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='fourth'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='last'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='objectAtIndex:'>
+<arg type='I' index='0' declared_type='NSUInteger' name='index'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='objectAtIndexedSubscript:'>
+<arg type='I' index='0' declared_type='NSUInteger' name='idx'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='rac_sequence'>
+<retval type='@' declared_type='RACSequence*'/>
+</method>
+<method selector='second'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='third'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='tupleByAddingObject:'>
+<arg type='@' index='0' declared_type='id' name='obj'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method variadic='true' class_method='true' selector='tupleWithObjects:' sentinel='0'>
+<arg type='@' index='0' declared_type='id' name='object'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method class_method='true' selector='tupleWithObjectsFromArray:'>
+<arg type='@' index='0' declared_type='NSArray*' name='array'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method class_method='true' selector='tupleWithObjectsFromArray:convertNullsToNils:'>
+<arg type='@' index='0' declared_type='NSArray*' name='array'/>
+<arg type='B' index='1' declared_type='BOOL' name='convert'/>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='RACTupleNil'>
+<method class_method='true' selector='tupleNil'>
+<retval type='@' declared_type='RACTupleNil*'/>
+</method>
+</class>
+<class name='RACTupleSequence'>
+<method class_method='true' selector='sequenceWithTupleBackingArray:offset:'>
+<arg type='@' index='0' declared_type='NSArray*' name='backingArray'/>
+<arg type='I' index='1' declared_type='NSUInteger' name='offset'/>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='RACTupleUnpackingTrampoline'>
+<method selector='setObject:forKeyedSubscript:'>
+<arg type='@' index='0' declared_type='RACTuple*' name='tuple'/>
+<arg type='@' index='1' declared_type='NSArray*' name='variables'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='trampoline'>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='RACUnit'>
+<method class_method='true' selector='defaultUnit'>
+<retval type='@' declared_type='RACUnit*'/>
+</method>
+</class>
+<class name='RACValueTransformer'>
+<method class_method='true' selector='transformerWithBlock:'>
+<arg type='@?' index='0' declared_type='id (^)(id)' name='block' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='@' declared_type='id'/>
+</arg>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<informal_protocol name='JRSwizzle'>
+<method type='B20@0:4:8:12^@16' class_method='true' selector='jr_swizzleClassMethod:withClassMethod:error:'>
+<arg type=':' index='0' declared_type='SEL' name='origSel_'/>
+<arg type=':' index='1' declared_type='SEL' name='altSel_'/>
+<arg type='^@' index='2' declared_type='NSError**' name='error_'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method type='B20@0:4:8:12^@16' class_method='true' selector='jr_swizzleMethod:withMethod:error:'>
+<arg type=':' index='0' declared_type='SEL' name='origSel_'/>
+<arg type=':' index='1' declared_type='SEL' name='altSel_'/>
+<arg type='^@' index='2' declared_type='NSError**' name='error_'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+</informal_protocol>
+<informal_protocol name='RACAppKitBindings'>
+<method type='v20@0:4@8@12@16' selector='rac_bind:toObject:withKeyPath:'>
+<arg type='@' index='0' declared_type='NSString*' name='binding'/>
+<arg type='@' index='1' declared_type='id' name='object'/>
+<arg type='@' index='2' declared_type='NSString*' name='keyPath'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v24@0:4@8@12@16@20' selector='rac_bind:toObject:withKeyPath:nilValue:'>
+<arg type='@' index='0' declared_type='NSString*' name='binding'/>
+<arg type='@' index='1' declared_type='id' name='object'/>
+<arg type='@' index='2' declared_type='NSString*' name='keyPath'/>
+<arg type='@' index='3' declared_type='id' name='nilValue'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v24@0:4@8@12@16@?20' selector='rac_bind:toObject:withKeyPath:transform:'>
+<arg type='@' index='0' declared_type='NSString*' name='binding'/>
+<arg type='@' index='1' declared_type='id' name='object'/>
+<arg type='@' index='2' declared_type='NSString*' name='keyPath'/>
+<arg type='@?' index='3' declared_type='id (^)(id)' name='transformBlock' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<retval type='@' declared_type='id'/>
+</arg>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v20@0:4@8@12@16' selector='rac_bind:toObject:withNegatedKeyPath:'>
+<arg type='@' index='0' declared_type='NSString*' name='binding'/>
+<arg type='@' index='1' declared_type='id' name='object'/>
+<arg type='@' index='2' declared_type='NSString*' name='keyPath'/>
+<retval type='v' declared_type='void'/>
+</method>
+</informal_protocol>
+<informal_protocol name='RACDeallocating'>
+<method type='@8@0:4' selector='rac_didDeallocSignal'>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+</informal_protocol>
+<informal_protocol name='RACDescription'>
+<method type='@8@0:4' selector='rac_description'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+</informal_protocol>
+<informal_protocol name='RACKVOWrapper'>
+<method type='@24@0:4@8@12I16@?20' selector='rac_addObserver:forKeyPath:options:block:'>
+<arg type='@' index='0' declared_type='NSObject*' name='observer'/>
+<arg type='@' index='1' declared_type='NSString*' name='keyPath'/>
+<arg type='I' index='2' declared_type='NSKeyValueObservingOptions' name='options'/>
+<arg type='@?' index='3' declared_type='RACKVOBlock' name='block' function_pointer='true'>
+<arg type='@' declared_type='id'/>
+<arg type='@' declared_type='id'/>
+<arg type='@' declared_type='NSDictionary*'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='@' declared_type='RACKVOTrampoline*'/>
+</method>
+</informal_protocol>
+<informal_protocol name='RACKVOWrapperPrivate'>
+<method type='@8@0:4' selector='RACKVOTrampolines'>
+<retval type='@' declared_type='NSMutableArray*'/>
+</method>
+<method type='v12@0:4@8' selector='rac_addKVOTrampoline:'>
+<arg type='@' index='0' declared_type='RACKVOTrampoline*' name='trampoline'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v12@0:4@8' selector='rac_removeKVOTrampoline:'>
+<arg type='@' index='0' declared_type='RACKVOTrampoline*' name='trampoline'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v12@0:4@8' selector='setRACKVOTrampolines:'>
+<arg type='@' index='0' declared_type='NSMutableArray*' name='RACKVOTrampolines'/>
+<retval type='v' declared_type='void'/>
+</method>
+</informal_protocol>
+<informal_protocol name='RACLifting'>
+<method type='@8@0:4' selector='rac_lift'>
+<retval type='@' declared_type='id'/>
+</method>
+<method type='@16@0:4@8@12' variadic='true' selector='rac_liftBlock:withArguments:' sentinel='0'>
+<arg type='@' index='0' declared_type='id' name='block'/>
+<arg type='@' index='1' declared_type='id' name='arg'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method type='@16@0:4@8@12' selector='rac_liftBlock:withArgumentsFromArray:'>
+<arg type='@' index='0' declared_type='id' name='block'/>
+<arg type='@' index='1' declared_type='NSArray*' name='args'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method type='@16@0:4:8@12' variadic='true' selector='rac_liftSelector:withObjects:'>
+<arg type=':' index='0' declared_type='SEL' name='selector'/>
+<arg type='@' index='1' declared_type='id' name='arg'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method type='@16@0:4:8@12' selector='rac_liftSelector:withObjectsFromArray:'>
+<arg type=':' index='0' declared_type='SEL' name='selector'/>
+<arg type='@' index='1' declared_type='NSArray*' name='args'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+</informal_protocol>
+<informal_protocol name='RACObservablePropertySubject'>
+<method type='@12@0:4@8' selector='rac_propertyForKeyPath:'>
+<arg type='@' index='0' declared_type='NSString*' name='keyPath'/>
+<retval type='@' declared_type='RACObservablePropertySubject*'/>
+</method>
+</informal_protocol>
+<informal_protocol name='RACPropertySubscribing'>
+<method type='v12@0:4@8' selector='rac_addDeallocDisposable:'>
+<arg type='@' index='0' declared_type='RACDisposable*' name='disposable'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='@8@0:4' selector='rac_deallocDisposable'>
+<retval type='@' declared_type='RACCompoundDisposable*'/>
+</method>
+<method type='@16@0:4@8@12' selector='rac_deriveProperty:from:'>
+<arg type='@' index='0' declared_type='NSString*' name='keyPath'/>
+<arg type='@' index='1' declared_type='RACSignal*' name='signal'/>
+<retval type='@' declared_type='RACDisposable*'/>
+</method>
+<method type='@20@0:4@8@12@16' class_method='true' selector='rac_signalFor:keyPath:observer:'>
+<arg type='@' index='0' declared_type='NSObject*' name='object'/>
+<arg type='@' index='1' declared_type='NSString*' name='keyPath'/>
+<arg type='@' index='2' declared_type='NSObject*' name='observer'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method type='@16@0:4@8@12' selector='rac_signalForKeyPath:observer:'>
+<arg type='@' index='0' declared_type='NSString*' name='keyPath'/>
+<arg type='@' index='1' declared_type='NSObject*' name='observer'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method type='@24@0:4@8@12I16@20' class_method='true' selector='rac_signalWithChangesFor:keyPath:options:observer:'>
+<arg type='@' index='0' declared_type='NSObject*' name='object'/>
+<arg type='@' index='1' declared_type='NSString*' name='keyPath'/>
+<arg type='I' index='2' declared_type='NSKeyValueObservingOptions' name='options'/>
+<arg type='@' index='3' declared_type='NSObject*' name='observer'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method type='@20@0:4@8@12@16' class_method='true' selector='rac_signalWithStartingValueFor:keyPath:observer:'>
+<arg type='@' index='0' declared_type='NSObject*' name='object'/>
+<arg type='@' index='1' declared_type='NSString*' name='keyPath'/>
+<arg type='@' index='2' declared_type='NSObject*' name='observer'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method type='@16@0:4@8@12' selector='rac_signalWithStartingValueForKeyPath:observer:'>
+<arg type='@' index='0' declared_type='NSString*' name='keyPath'/>
+<arg type='@' index='1' declared_type='NSObject*' name='observer'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method type='v12@0:4@8' selector='setRac_deallocDisposable:'>
+<arg type='@' index='0' declared_type='RACCompoundDisposable*' name='rac_deallocDisposable'/>
+<retval type='v' declared_type='void'/>
+</method>
+</informal_protocol>
+<informal_protocol name='RACSelectorSignal'>
+<method type='@12@0:4:8' class_method='true' selector='rac_signalForSelector:'>
+<arg type=':' index='0' declared_type='SEL' name='selector'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+<method type='@12@0:4:8' selector='rac_signalForSelector:'>
+<arg type=':' index='0' declared_type='SEL' name='selector'/>
+<retval type='@' declared_type='RACSignal*'/>
+</method>
+</informal_protocol>
+<informal_protocol name='RACSubscriber'>
+<method type='v12@0:4@8' selector='didSubscribeWithDisposable:'>
+<arg type='@' index='0' declared_type='RACDisposable*' name='disposable'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v8@0:4' selector='sendCompleted'>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v12@0:4@8' selector='sendError:'>
+<arg type='@' index='0' declared_type='NSError*' name='error'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v12@0:4@8' selector='sendNext:'>
+<arg type='@' index='0' declared_type='id' name='value'/>
+<retval type='v' declared_type='void'/>
+</method>
+</informal_protocol>
+</signatures>
