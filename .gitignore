@@ -14,3 +14,7 @@ xcuserdata
 profile
 *.moved-aside
 
+# Pods
+build-*
+build
+.build
