@@ -75,6 +75,14 @@
 			name = "RubyMotion Libs";
 			sourceTree = "<group>";
 		};
+		5801F8FF17485C87002D2C17 /* Ruby Headers */ = {
+			isa = PBXGroup;
+			children = (
+				5801F8F2174857C0002D2C17 /* CDORubyland.h */,
+			);
+			name = "Ruby Headers";
+			sourceTree = "<group>";
+		};
 		58DAE7051748547500CE484D = {
 			isa = PBXGroup;
 			children = (
@@ -121,7 +129,7 @@
 				58DAE7241748547500CE484D /* CDOAppDelegate.m */,
 				58DAE7261748547600CE484D /* MainMenu.xib */,
 				58DAE7181748547500CE484D /* Supporting Files */,
-				5801F8F2174857C0002D2C17 /* CDORubyland.h */,
+				5801F8FF17485C87002D2C17 /* Ruby Headers */,
 			);
 			path = ObjCRubyMotionIntegration;
 			sourceTree = "<group>";
@@ -145,9 +153,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58DAE72B1748547600CE484D /* Build configuration list for PBXNativeTarget "ObjCRubyMotionIntegration" */;
 			buildPhases = (
+				5801F906174860EC002D2C17 /* ShellScript */,
 				1D95E7DF720141DB9D5A5375 /* Check Pods Manifest.lock */,
 				58DAE70A1748547500CE484D /* Sources */,
-				5801F8F317485872002D2C17 /* ShellScript */,
 				58DAE70B1748547500CE484D /* Frameworks */,
 				58DAE70C1748547500CE484D /* Resources */,
 				5E30CFB68ED548FB9D9BBBB1 /* Copy Pods Resources */,
@@ -216,7 +224,7 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 		};
-		5801F8F317485872002D2C17 /* ShellScript */ = {
+		5801F906174860EC002D2C17 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -224,6 +232,7 @@
 			inputPaths = (
 			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/ObjCRubyMotionIntegration-Ruby-universal.a",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
