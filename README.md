@@ -2,7 +2,7 @@
 
 This repo contains a sample project where an Objective-C project is set up to compile and embed RubyMotion classes. It also demonstrates sharing CocoaPods between the two projects via symlinks until I get around to making `motion-cocoapods` use existing Podfiles.
 
-This was based off @clayallsopp's article on [Mixing Objective-C and Ruby](http://clayallsopp.com/posts/mixing-objective-c-and-ruby/). Please read the article for more information.
+This was based off [@clayallsopp](http://github.com/clayallsopp)'s article on [Mixing Objective-C and Ruby](http://clayallsopp.com/posts/mixing-objective-c-and-ruby/). Please read the article for more information.
 
 ## What it does
 
