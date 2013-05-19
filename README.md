@@ -10,11 +10,15 @@ On the Ruby side, `CDORubyLand` defines a `run` method which uses `RACSignal` to
 
 `CDOAppDelegate` instantiates an instance of `CDORubyLand` and calls `run` method. The window is purely for show.
 
+![Screenshot of output](http://f.cl.ly/items/410G393a3T330R2N1N1U/Screen%20Shot%202013-05-19%20at%202.02.41%20PM.png)
+
 ## Build configuration
 
 This project adds a build script that automatically runs `rake static` to create the static library to be included into the Objective-C part of the project. It's important to note that I had to set the `GEM_ROOT` and `GEM_PATH` environment variables for it to pick up my `motion-cocoapods` install. You'll need to change this path to suit yours if you're using `rbenv` or similar.
 
-You must also set the output files of the build script to have the static library, otherwise Xcode won't run this at the right part of the build.
+You must also set the input files to the Ruby files, and the output file of the build script to have the static library, otherwise Xcode won't run this at the right part of the build.
+
+![Screenshot of build configuration](http://cl.ly/image/0F3u3b2J2W2T/Screen%20Shot%202013-05-19%20at%201.59.58%20PM.png)
 
 ## Linking
 
