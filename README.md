@@ -12,6 +12,12 @@ On the Ruby side, `CDORubyLand` defines a `run` method which uses `RACSignal` to
 
 ![Screenshot of output](http://f.cl.ly/items/410G393a3T330R2N1N1U/Screen%20Shot%202013-05-19%20at%202.02.41%20PM.png)
 
+## Files to look at
+
+* [CDORubyland.rb](https://github.com/chendo/ObjCRubyMotionIntegration/blob/master/ObjCRubyMotionIntegration/Ruby/CDORubyLand.rb) contains the Ruby code that we run from Objective-C
+* [CDORubyland.h](https://github.com/chendo/ObjCRubyMotionIntegration/blob/master/ObjCRubyMotionIntegration/CDORubyland.h) contains the headers for the Ruby class
+* [CDOAppDelegate.m](https://github.com/chendo/ObjCRubyMotionIntegration/blob/master/ObjCRubyMotionIntegration/CDOAppDelegate.m) instantiates and calls the Ruby object
+
 ## Build configuration
 
 This project adds a build script that automatically runs `rake static` to create the static library to be included into the Objective-C part of the project. It's important to note that I had to set the `GEM_ROOT` and `GEM_PATH` environment variables for it to pick up my `motion-cocoapods` install. You'll need to change this path to suit yours if you're using `rbenv` or similar.
