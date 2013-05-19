@@ -14,7 +14,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     CDORubyland *ruby = [[CDORubyland alloc] init];
-    [ruby countdown];
+    [ruby run];
 }
 
 @end

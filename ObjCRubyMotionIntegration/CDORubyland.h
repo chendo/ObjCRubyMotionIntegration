@@ -8,7 +8,7 @@
 
 @interface CDORubyland : NSObject
 
-- (id)countdown;
+- (id)run;
 
 @end
 
