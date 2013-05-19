@@ -10,5 +10,7 @@
 
 int main(int argc, char *argv[])
 {
+    void RubyMotionInit(int, char **);
+    RubyMotionInit(argc, argv);
     return NSApplicationMain(argc, (const char **)argv);
 }
