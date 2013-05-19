@@ -148,22 +148,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXLegacyTarget section */
-		5801F907174884FF002D2C17 /* RubyMotionCompilationTarget */ = {
-			isa = PBXLegacyTarget;
-			buildArgumentsString = "$(ACTION)";
-			buildConfigurationList = 5801F908174884FF002D2C17 /* Build configuration list for PBXLegacyTarget "RubyMotionCompilationTarget" */;
-			buildPhases = (
-			);
-			buildToolPath = /bin/sh;
-			dependencies = (
-			);
-			name = RubyMotionCompilationTarget;
-			passBuildSettingsInEnvironment = 1;
-			productName = RubyMotionCompilationTarget;
-		};
-/* End PBXLegacyTarget section */
-
 /* Begin PBXNativeTarget section */
 		58DAE70D1748547500CE484D /* ObjCRubyMotionIntegration */ = {
 			isa = PBXNativeTarget;
@@ -208,7 +192,6 @@
 			projectRoot = "";
 			targets = (
 				58DAE70D1748547500CE484D /* ObjCRubyMotionIntegration */,
-				5801F907174884FF002D2C17 /* RubyMotionCompilationTarget */,
 			);
 		};
 /* End PBXProject section */
@@ -312,27 +295,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5801F909174884FF002D2C17 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEBUGGING_SYMBOLS = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		5801F90A174884FF002D2C17 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		58DAE7291748547600CE484D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -429,14 +391,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5801F908174884FF002D2C17 /* Build configuration list for PBXLegacyTarget "RubyMotionCompilationTarget" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5801F909174884FF002D2C17 /* Debug */,
-				5801F90A174884FF002D2C17 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
 		58DAE7091748547500CE484D /* Build configuration list for PBXProject "ObjCRubyMotionIntegration" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
